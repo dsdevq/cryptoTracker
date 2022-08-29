@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/cryptoTracker.git/static/css/main.391f3dfd.css",
+    "main.js": "/cryptoTracker.git/static/js/main.babcf56f.js",
+    "index.html": "/cryptoTracker.git/index.html",
+    "main.391f3dfd.css.map": "/cryptoTracker.git/static/css/main.391f3dfd.css.map",
+    "main.babcf56f.js.map": "/cryptoTracker.git/static/js/main.babcf56f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.391f3dfd.css",
+    "static/js/main.babcf56f.js"
+  ]
+}
