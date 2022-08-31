@@ -1,5 +1,5 @@
 import { fetchCrypto } from './cryptoAPI';
-import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import { RootState, AppThunk } from '../../app/store';
 
 export interface CryptoState {

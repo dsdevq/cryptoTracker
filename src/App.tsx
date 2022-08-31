@@ -6,7 +6,7 @@ function App() {
     <div className="min-h-full flex flex-col bg-slate-400">
       <NavBar />
       <CryptoList />
-      <footer>Footer</footer>
+      {/* <footer>Footer</footer> */}
     </div>
   );
 }

@@ -1,7 +1,6 @@
 import { useAppDispatch } from '../app/hooks'
 import { filter } from '../features/crypto/cryptoSlice'
 import { FaSearch } from 'react-icons/fa';
-// import { FaWindowClose } from 'react-icons/fa';
 
 export const NavBar = () => {
 
@@ -20,7 +19,6 @@ export const NavBar = () => {
         <div className='relative'>
           <FaSearch className='absolute z-10 top-1/3 left-1 text-slate-700' />
           <input className='relative outline-none rounded-md py-2 px-6' placeholder='Enter coin name' type="text" onChange={handleOnChange} />
-          {/* <FaWindowClose className='absolute z-10 top-1/3 right-1 text-slate-700 cursor-pointer' /> */}
         </div>
       </form>
     </header>
