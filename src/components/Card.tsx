@@ -9,14 +9,16 @@ export const Card = () => {
     <>
       <input type="checkbox" id="my-modal-3" className="modal-toggle" />
       <div className="modal">
-        <div className="modal-box relative">
+        <div className="modal-box max-h-[100vh] relative flex flex-col items-start gap-2">
           <label htmlFor="my-modal-3" className="btn btn-sm btn-circle absolute right-2 top-2" onClick={() => dispatch(openModal(''))}>✕</label>
-          <h3 className="text-lg font-bold">{name}, {symbol?.toUpperCase()}</h3>
-          <figure><img className="w-24" src={image} alt="Shoes" /></figure>
-          <p className="py-4">Market Cap is ${market_cap?.toLocaleString()} Rank: #{market_cap_rank}</p>
-          <p className="py-4">Current price is ${current_price?.toLocaleString()}</p>
-          <p className="py-4">Price change in last 24h is {price_change_percentage_24h}%</p>
-          <a target='blank_' href={`https://www.coingecko.com/en/coins/${id}/`} className="py-4 text-slate-200 underline">More details</a>
+          <h3 className="text-lg font-bold flex items-center">{name}, {symbol?.toUpperCase()}
+            <img className="w-11 p-2 motion-safe:animate-spin-slow" src={image} alt={name} />
+          </h3>
+          <p>Market Cap is ${market_cap?.toLocaleString()} Rank: #{market_cap_rank}</p>
+          <p>Rank: #{market_cap_rank}</p>
+          <p>Current price is ${current_price?.toLocaleString()}</p>
+          <p>Price change in last 24h is {price_change_percentage_24h}%</p>
+          <a target='blank_' href={`https://www.coingecko.com/en/coins/${id}/`} className=" text-slate-200 underline italic motion-safe:animate-bounce ">More details</a>
         </div>
       </div>
     </>
