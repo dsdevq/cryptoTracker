@@ -42,8 +42,8 @@ export const CryptoList = () => {
           </p>
         </li>
         {
-          searchResult.length ? searchResult.map((i: Crypto) => (
-            <CryptoItem {...i} key={i.id} />
+          searchResult.length ? searchResult.map(({ id, ...rest }: Crypto) => (
+            <CryptoItem {...{ id, ...rest }} key={id} />
           ))
             :
             <p className='text-center font-semibold text-4xl underline text-gray-800'>No results...</p>
