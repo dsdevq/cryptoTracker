@@ -1,16 +1,15 @@
-import { useAppDispatch, useAppSelector } from "../app/hooks"
-import { openModal, selectModal } from "../features/crypto/cryptoSlice"
+import { useAppSelector } from "../app/hooks"
+import { selectModal } from "../features/crypto/cryptoSlice"
 
 export const Card = () => {
   const { name, id, image, market_cap_rank, market_cap, current_price, price_change_percentage_24h, symbol } = useAppSelector(selectModal)
-  const dispatch = useAppDispatch()
 
   return (
     <>
       <input type="checkbox" id="my-modal-3" className="modal-toggle" />
-      <div className="modal">
+      <div className="modal text-gray-400">
         <div className="modal-box max-h-[100vh] relative flex flex-col items-start gap-2">
-          <label htmlFor="my-modal-3" className="btn btn-sm btn-circle absolute right-2 top-2" onClick={() => dispatch(openModal(''))}>✕</label>
+          <label htmlFor="my-modal-3" className="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
           <h3 className="text-lg font-bold flex items-center">{name}, {symbol?.toUpperCase()}
             <img className="w-11 p-2 motion-safe:animate-spin-slow" src={image} alt={name} />
           </h3>

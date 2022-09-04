@@ -16,7 +16,7 @@ export const CryptoItem = ({ id, image, name, market_cap, price_change_percentag
         <label onClick={handleOnClick} htmlFor="my-modal-3" className="btn modal-button opacity-0 absolute w-full cursor-default p-0"></label>
 
         <p className='basis-6 shrink-0'>{market_cap_rank}</p>
-        <img className='aspect-square w-12' src={image} alt={id} />
+        <img className='w-12' src={image} alt={id} />
         <p className='basis-full'>
           {name}
         </p>
