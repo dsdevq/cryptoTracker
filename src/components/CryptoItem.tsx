@@ -10,8 +10,7 @@ export const CryptoItem = ({ id, image, name, market_cap, price_change_percentag
 
   return (
     <>
-      <li className='flex py-2 gap-2 items-center border-b last:border-b font-medium relative'
-      >
+      <li className='flex py-2 gap-2 items-center border-b last:border-b font-medium relative'>
         {/* //! Open modal */}
         <label onClick={handleOnClick} htmlFor="my-modal-3" className="btn modal-button opacity-0 absolute w-full cursor-default p-0"></label>
 

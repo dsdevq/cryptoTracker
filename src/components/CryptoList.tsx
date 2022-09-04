@@ -9,10 +9,10 @@ export const CryptoList = () => {
   const dispatch = useAppDispatch()
   const modal = useAppSelector(selectModal)
 
-
   const handleOnClick = (e: any) => {
     dispatch(sort(e.target.innerText))
   }
+
   useEffect(() => {
     dispatch(getData())
   }, [dispatch])
@@ -21,7 +21,7 @@ export const CryptoList = () => {
     <main className='flex-auto container mx-auto px-2 bg-slate-300 shadow-slate-600 shadow-xl sm:px-4 relative text-black'>
       <ul className='flex flex-col'>
         {Object.keys(modal).length !== 0 && <Card />}
-        <li className='flex bg-slate-300 border-b-2 py-2 gap-2 items-center font-semibold sticky top-0 z-20'>
+        <li className='flex bg-slate-300 border-b-2 py-2 gap-2 items-center font-semibold sticky top-11 z-20'>
           <span className='basis-6 shrink-0'>
             <span
               className='cursor-pointer'
