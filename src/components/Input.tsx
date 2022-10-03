@@ -1,17 +1,19 @@
 interface IInput {
-  id: string
+  heading: string
   options: string[]
-  disabled: boolean
-  handleOnChange: (e: any) => void
+  handleOnChangeSelect: (e: any) => void
+  select: string
+  amount: number
+  handleOnChangeAmount: (e: any) => void
 }
-export const Input = ({ id, options, handleOnChange, disabled }: IInput) => {
+export const Input = ({ heading, options, handleOnChangeSelect, amount, handleOnChangeAmount, select }: IInput) => {
   return (
     <>
-      <label htmlFor={id}>{id}
+      <label htmlFor={heading}>{heading}
       </label>
       <div className="flex">
-        <input id={id} className="bg-white" disabled={disabled} type="number" />
-        <select onChange={handleOnChange}>
+        <input id={heading} value={amount} onChange={handleOnChangeAmount} className="bg-white" type="number" />
+        <select value={select} onChange={handleOnChangeSelect}>
           {options.length && options.map((option: string) =>
           (
             <option key={option} value={option}>{option.toUpperCase()}</option>
